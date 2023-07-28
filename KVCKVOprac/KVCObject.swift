@@ -8,14 +8,17 @@
 import Foundation
 
 class KVCObject: NSObject {
+    // 真 KVC 宣告
     @objc dynamic var string: String!
 
-//    @objc static var string: String = ""
-    
     override init() {
         self.string = ""
         super.init()
     }
+
+    
+    // 偽 KVC 宣告
+//    @objc static var string: String = ""
 
     
 }
