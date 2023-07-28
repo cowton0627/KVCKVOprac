@@ -9,6 +9,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
+    // 真 KVC 物件，接值用
     internal var kvcSecond = KVCObject()
     
     private var text = ""
@@ -17,27 +18,22 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let kvcObject = KVCObject()
+        
+        // 偽 KVC 正向
 //        text = KVCObject.value(forKey: "string") as! String
 //        secondLabel.text = text
-        
-        // KVC 正向
-//        text = KVCObject.value(forKey: "string") as! String
+
         text = kvcSecond.value(forKey: "string") as! String
         secondLabel.text = text
-        
-        
-        
     }
     
     @IBAction func secondBtnTapped(_ sender: UIButton) {
-        // KVC 反向
-        guard let text = secondTextField.text else { return }
+        // 偽 KVC 反向
+//        guard let text = secondTextField.text else { return }
 //        KVCObject.string = text
 
     
 //        self.navigationController?.popViewController(animated: true)
-    
     }
     
     
